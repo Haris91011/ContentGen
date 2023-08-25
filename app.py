@@ -1,6 +1,11 @@
 import streamlit as st
 from streamlit_chat import message
 from streamlit_Utilities import *
+
+
+openapi_key = st.secrets["open_ai_key"]
+# openai.api_key = api_key.key
+openai.api_key = openapi_key
 # from instadev import *
 if 'instagram' not in st.session_state:
     st.session_state['instagram'] = []
